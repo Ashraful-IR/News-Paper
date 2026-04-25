@@ -1,17 +1,18 @@
 import Link from "next/link";
+import NavLink from "../NavLink";
 
 const NavPage = () => {
   const menuItems = (
     <>
-      <Link href="/" className="rounded-lg">
+      <NavLink href="/" className="rounded-lg">
         Home
-      </Link>
-      <Link href="/about" className="rounded-lg">
+      </NavLink>
+      <NavLink href="/About" className="rounded-lg">
         About
-      </Link>
-      <Link href="/career" className="rounded-lg">
+      </NavLink>
+      <NavLink href="/Career" className="rounded-lg">
         Career
-      </Link>
+      </NavLink>
     </>
   );
   return (
@@ -44,10 +45,12 @@ const NavPage = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{menuItems}</ul>
+        <ul className="menu menu-horizontal px-1 gap-5 font-semibold ">
+          {menuItems}
+        </ul>
       </div>
       <div className="navbar-end">
-        <Link href="/" className="btn btn-outline">
+        <Link href="/LogIn" className="btn btn-outline">
           Log In
         </Link>
       </div>
